@@ -1,0 +1,28 @@
+This folder contains the basics of running a redis-server using a Dockerfile and accessing 
+redis-cli to run applications inside the container.
+
+We will learn that  we can run docker containers in different tabs separately with same 
+Image ID, there is no exchange of files between them. Docker containers behave independently.
+
+docker exec -it <container ID> <command>
+This can be used
+- when you have started redis-server in one tab, so one container has redis-server.
+- Now when you want to run redis-cli in the same container, we need to link to the container. 
+- Open a new tab. Run the 'exec' command to run redis-cli.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

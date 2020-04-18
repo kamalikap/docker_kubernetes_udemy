@@ -1,0 +1,42 @@
+sudo: required
+services: 
+        - docker
+
+before-install: 
+        - docker build -t kamalikaxilinx/docker-react2 -f Dockerfile.dev .
+
+script: 
+        - docker run -e CI=true kamalikaxilinx/docker-react2 npm run test
+
+
+deploy: 
+        edge: true
+        provider: elasticbeanstalk
+        region: "us-west-2"
+        app: "docker-react2"
+        env: "DockerReact2-env"
+        bucket_name: "elasticbeanstalk-us-west-2-307328585937"
+        bucket_path: "docker-react2"
+        on:
+                branch: master
+        access_key_id: $AWS_ACCESS_KEY
+        secret_access_key: $AWS_SECRET_KEY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

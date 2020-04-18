@@ -1,0 +1,27 @@
+How to build custom images in Docker
+Dockerfile-> Docker Client -> Docker Server-> Usable Image
+
+Here we understand the concept of port mapping.
+
+docker run -p <localweb port> : <Port name inside the container> <ImageID>
+
+We will learn about
+WORKDIR   /usr/app
+
+COPY ./   ./
+# COPY <Path of the shell> <Path inside the container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

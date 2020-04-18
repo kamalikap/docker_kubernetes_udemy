@@ -1,0 +1,21 @@
+version: '3'                                                       #specifies the version of docker compose we are using
+services:                                                          # two services and both of them take up two containers
+        redis-server:
+                image: 'redis'
+        node-app:
+                restart: on-failure  
+                build: .
+                ports:
+                        - "4001:8081"
+
+
+
+
+
+
+
+
+
+
+
+
